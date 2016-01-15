@@ -1,0 +1,140 @@
+/* Base Element Styling
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+//  Box Model
+// ------------------------------
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+} 
+
+
+//  Anchors
+// ------------------------------
+
+a {
+  
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Fonts & Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+//  Material Icons
+// ------------------------------
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* CSS Helper Classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+//  Clear Inner Floats
+// ------------------------------
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+
+//  Screen Reader Support
+// ------------------------------
+// https://code.google.com/p/chromium/issues/detail?id=457146
+// https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.visually-hidden { 
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */

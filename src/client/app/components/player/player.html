@@ -1,0 +1,51 @@
+<md-card class="gp-player"
+         layout="column"
+         layout-fill
+         layout-align="center stretch">
+
+
+
+
+  <md-card-header class="gp-player__header"
+                  layout="row" 
+                  layout-align="start center">
+
+
+      <md-button class="md-icon-button" aria-label="Settings">
+        <md-icon class="material-icons">
+          menu
+        </md-icon>
+      </md-button>
+
+      <span flex></span>
+
+      <md-button class="md-icon-button" aria-label="Favorite">
+        <md-icon class="material-icons">
+          favorite
+        </md-icon>
+      </md-button>
+
+      <md-button class="md-icon-button" aria-label="Share">
+        <md-icon class="material-icons">
+          share_arrow
+        </md-icon>
+      </md-button>
+
+
+  </md-card-header>
+
+
+
+
+  <iframe class="gp-player__iframe"
+          ng-src="{{ videoSrc }}" 
+          webkitallowfullscreen allowfullscreen 
+          frameborder="no"
+          flex="100">
+
+  </iframe>
+
+
+
+
+</md-card>

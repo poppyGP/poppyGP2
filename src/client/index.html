@@ -1,0 +1,274 @@
+<!doctype html>
+<html class="no-js"
+      lang="en"
+      ng-app="poppygp">
+
+
+
+<head>
+
+
+
+
+  <!-- Metadata Tags
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta charset="utf-8">
+  <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible"  content="IE=edge,chrome=1">
+
+  <meta name="author"               content="Jonathan Ho">
+  <meta name="application-name"     content="poppyGrandPrix">
+  <meta name="description"          content="Grand Prix de Papaveraceae">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+
+  <!-- Page Title
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <title>poppyGP</title>
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+
+  <!-- Facebook Open Graph
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta property="og:title"         content="poppyGrandPrix">
+  <meta property="og:site_name"     content="poppyGP">
+  <meta property="og:type"          content="website">
+  <meta property="og:url"           content="http://poppy.gq">
+  <meta property="og:image"         content="https://ustvstaticcdn1-a.akamaihd.net/i/channel/live/1_20560398,640x360,b.jpg">
+  <meta property="og:description"   content="Grand Prix de Papaveraceae">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+
+  <!-- Twitter Cards
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta name="twitter:card"         content="player">
+  <meta name="twitter:site"         content="@poppyGrandPrix">
+  <meta name="twitter:title"        content="poppyGP">
+  <meta name="twitter:description"  content="Grand Prix de Papaveraceae">
+  <meta name="twitter:image"        content="https://ustvstaticcdn1-a.akamaihd.net/i/channel/live/1_20560398,640x360,b.jpg">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Favicons & Touch Icons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <link rel="apple-touch-icon" sizes="57x57"    href="assets/icons/touch/apple-touch-icon-57x57.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="60x60"    href="assets/icons/touch/apple-touch-icon-60x60.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="72x72"    href="assets/icons/touch/apple-touch-icon-72x72.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="76x76"    href="assets/icons/touch/apple-touch-icon-76x76.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="114x114"  href="assets/icons/touch/apple-touch-icon-114x114.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="120x120"  href="assets/icons/touch/apple-touch-icon-120x120.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="144x144"  href="assets/icons/touch/apple-touch-icon-144x144.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="152x152"  href="assets/icons/touch/apple-touch-icon-152x152.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="180x180"  href="assets/icons/touch/apple-touch-icon-180x180.png?v=letsgo2016">
+
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-32x32.png?v=letsgo2016" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-194x194.png?v=letsgo2016" sizes="194x194">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-96x96.png?v=letsgo2016" sizes="96x96">
+  <link rel="icon" type="image/png" href="assets/icons/touch/android-chrome-192x192.png?v=letsgo2016" sizes="192x192">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-16x16.png?v=letsgo2016" sizes="16x16">
+
+  <link rel="manifest"      href="assets/icons/touch/manifest.json?v=letsgo2016">
+  <link rel="mask-icon"     href="assets/icons/touch/safari-pinned-tab.svg?v=letsgo2016" color="#004626">
+  <link rel="shortcut icon" href="assets/icons/touch/favicon.ico?v=letsgo2016">
+
+  <meta name="apple-mobile-web-app-title" content="poppyGP">
+  <meta name="application-name"           content="poppyGP">
+  <meta name="msapplication-TileColor"    content="#004626">
+  <meta name="msapplication-TileImage"    content="assets/icons/touch/mstile-144x144.png?v=letsgo2016">
+  <meta name="msapplication-config"       content="assets/icons/touch/browserconfig.xml?v=letsgo2016">
+  <meta name="theme-color"                content="#004626">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+
+  <!-- Gulp Inject
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- build:css({.tmp/serve,src/client}) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src/client}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- build:js(src/client) scripts/modernizr.js -->
+  <script src="../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+
+</head>
+
+
+
+
+<body ng-cloak>
+
+
+
+
+  <!-- =============================================== -->
+
+
+
+
+
+
+<md-card layout="column"
+         layout-fill>
+
+
+
+
+  <md-card-header>
+
+
+    <md-card-avatar>
+
+      <img class="md-user-avatar" 
+           src="assets/images/card.jpg" 
+           style="border-radius: 50%; height: 40px; width: 40px;">
+
+    </md-card-avatar>
+
+
+    <md-card-header-text>
+
+      <span class="md-title">User</span>
+      <span class="md-subhead">subhead</span>
+
+    </md-card-header-text>
+
+
+  </md-card-header>
+
+
+
+
+  <gp-video channel-id="20560398" 
+            class="md-card-image"
+            style="display: flex; flex: 100%;">
+  </gp-video>
+
+
+
+
+  <md-card-actions layout="row" 
+                   layout-align="start center">
+
+
+    <md-button class="md-icon-button" aria-label="Settings">
+      <md-icon class="material-icons">
+        menu
+      </md-icon>
+    </md-button>
+
+    <span flex></span>
+
+    <md-button class="md-icon-button" aria-label="Favorite">
+      <md-icon class="material-icons">
+        favorite
+      </md-icon>
+    </md-button>
+
+    <md-button class="md-icon-button" aria-label="Share">
+      <md-icon class="material-icons">
+        share_arrow
+      </md-icon>
+    </md-button>
+
+
+  </md-card-actions>
+
+
+
+
+</md-card>
+
+
+
+  <!-- Site Toolbar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+
+  <md-content layout="row" layout-align="center start" layout-fill>
+    
+    <gp-player channel-id="20560398" class="md-card-image">
+    </gp-player>
+
+  </md-content>
+
+   END Toolbar ––––––––––––––––––––––––––––––––– -->
+
+
+
+
+
+
+
+
+  <!-- =============================================== -->
+
+
+
+
+  <!-- Google Analytics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-63184114-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src='//www.google-analytics.com/analytics.js'></script>
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Inject JavaScript & Partials
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- build:js(src/client) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials,src/client}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <!-- inject:partials -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+</body>
+
+</html>
