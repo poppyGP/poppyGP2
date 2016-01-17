@@ -1,6 +1,8 @@
 <?php
 
-
+if (isset($_GET['track'])) {
+  
+}
 
 
 /* Configuration & Initialisation
@@ -29,9 +31,15 @@ $filename = 'playlist.xspf';
 $filepath = 'storage/' . $filename;
 
 if (file_exists($filepath)) {
-  $xml = simplexml_load_file($filepath);
+
+  $xml = new XMLReader();
+
+  $xml->open($filepath);
+
 } else {
+
   exit('Failed to open ' . $filepath);
+  
 }
 
 
@@ -49,7 +57,6 @@ foreach ($xml->trackList->track as $track) {
 
   $i++;
 }
-
 function test($test) {
   echo $test;
   echo '<br/>';

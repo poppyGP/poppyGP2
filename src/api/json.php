@@ -12,7 +12,7 @@ $track_list = array();
 //  Require Resources
 // ------------------------------
 
-require 'util/TrackParser.php';
+require 'util/TrackJson.php';
 
 
 //  DateTime
@@ -29,30 +29,8 @@ $filename = 'playlist.xspf';
 $filepath = 'storage/' . $filename;
 
 if (file_exists($filepath)) {
-  $xml = simplexml_load_file($filepath);
+  $playlist = XML2JSON(file_get_contents($filepath));
+  print_r($playlist);
 } else {
   exit('Failed to open ' . $filepath);
 }
-
-
-
-
-/* Iteration
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-$i = 1;
-foreach ($xml->trackList->track as $track) {
-
-  $tracklist[$i]['title']     = getTrackTitle($track->title);
-  $tracklist[$i]['location']  = getTrackLocation($track->location);
-  $tracklist[$i]['duration']  = getTrackDuration($track->duration);
-
-  $i++;
-}
-
-function test($test) {
-  echo $test;
-  echo '<br/>';
-}
-
-print_r($tracklist);

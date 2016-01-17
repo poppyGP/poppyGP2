@@ -3,7 +3,25 @@
  * Track Parser
  */
 
-function parseTrack() {
+function parseXspf($filepath) {
+
+  $xmlReader = new XMLReader();
+
+  $xmlReader->open($filepath);
+
+  //  Move Pointer to first <track>
+  // ------------------------------
+
+  while ($xmlReader->read() && $xmlReader->name !== 'track') {
+  }
+
+
+  //  Iterate over <track> elements
+  // ------------------------------
+
+  while ($xmlReader->name == 'track') {
+    $item = new SimpleXmlElement($xmlReader->reader);
+  }
 
 }
 
